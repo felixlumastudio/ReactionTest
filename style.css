@@ -1,0 +1,123 @@
+/* 去掉浏览器默认边距 */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, "Microsoft YaHei", sans-serif;
+  background-color: #f4f7fb;
+  color: #333;
+}
+
+/* 页面主容器 */
+.container {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* 标题 */
+h1 {
+  margin-bottom: 12px;
+  font-size: 32px;
+  color: #1f2d3d;
+}
+
+/* 说明文字 */
+.description {
+  margin-bottom: 24px;
+  line-height: 1.8;
+  color: #5b6573;
+  font-size: 16px;
+}
+
+/* 测试区域：圆圈 */
+.test-area {
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  cursor: pointer;
+  user-select: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-bottom: 24px;
+  padding: 30px;
+  box-sizing: border-box;
+  line-height: 1.5;
+  white-space: pre-line;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.test-area:hover {
+  transform: scale(1.02);
+}
+
+/* 初始状态 */
+.test-area.idle {
+  background-color: #dbe7f5;
+  color: #1f2d3d;
+}
+
+/* 等待状态 */
+.test-area.waiting {
+  background-color: #ffe9b3;
+  color: #7a5600;
+}
+
+/* 可点击状态 */
+.test-area.ready {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* 点太早状态 */
+.test-area.too-early {
+  background-color: #e74c3c;
+  color: white;
+}
+
+/* 成功完成状态 */
+.test-area.done {
+  background-color: #8e44ad;
+  color: white;
+}
+
+/* 结果文字 */
+.result {
+  min-height: 28px;
+  font-size: 18px;
+  margin-bottom: 0;
+  color: #2f3b4a;
+}
+
+/* 手机适配 */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 26px;
+  }
+
+  .description {
+    font-size: 15px;
+  }
+
+  .test-area {
+    width: 240px;
+    height: 240px;
+    font-size: 20px;
+    padding: 20px;
+  }
+
+  .result {
+    font-size: 16px;
+  }
+}
