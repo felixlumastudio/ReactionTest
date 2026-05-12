@@ -120,4 +120,10 @@ h1 {
   .result {
     font-size: 16px;
   }
+
+  .ad-box {
+  width: 100%;
+  max-width: 700px;
+  margin: 20px auto;
+  }
 }
